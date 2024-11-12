@@ -129,13 +129,6 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		388D83022CD762200056D583 /* ViewModifiers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModifiers;
-			sourceTree = "<group>";
-		};
 		38B1CB402C727848006B62D3 = {
 			isa = PBXGroup;
 			children = (
@@ -169,13 +162,6 @@
 				38B1CB892C73FCA2006B62D3 /* View */,
 			);
 			path = PopEng;
-			sourceTree = "<group>";
-		};
-		38B1CB542C727849006B62D3 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		38B1CB5E2C727849006B62D3 /* PopEngTests */ = {
@@ -237,8 +223,6 @@
 		38B1CB8C2C73FCE0006B62D3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				388D83022CD762200056D583 /* ViewModifiers */,
-				38B1CB542C727849006B62D3 /* Preview Content */,
 				38B1CB4C2C727848006B62D3 /* PopEngApp.swift */,
 			);
 			path = Other;
@@ -570,7 +554,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PopEng/Other/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PopEng/Other\"";
 				DEVELOPMENT_TEAM = 3KLZFAARL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -604,7 +588,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PopEng/Other/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PopEng/Other\"";
 				DEVELOPMENT_TEAM = 3KLZFAARL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

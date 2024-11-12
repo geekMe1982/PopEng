@@ -12,6 +12,6 @@ struct Texts {
 
 struct Images {
     static let gettingStartedImage = "CasualBoySit"
-    static let OnBoard1 = "CasualBoyFly"
+    static let OnBoarding1 = "CasualBoyFly"
     static let onboarding2 = "CasualBoyDance"
 }
