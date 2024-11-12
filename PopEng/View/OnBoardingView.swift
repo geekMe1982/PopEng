@@ -37,7 +37,7 @@ struct OnBoardingView: View {
                     .foregroundColor(Color.purple)
                     .font(.system(size: 20).bold())
                 }
-                Image(Images.OnBoard1)
+                Image(Images.OnBoarding1)
                     .resizable()
                     .scaledToFit()
                     .offset(x:-20, y: -30)
