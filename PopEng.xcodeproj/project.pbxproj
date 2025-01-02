@@ -30,12 +30,16 @@
 		38851E612C7F4DB3007A4F85 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 38851E602C7F4DB3007A4F85 /* FirebaseStorage */; };
 		388D830A2CD900CF0056D583 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D83092CD900CF0056D583 /* GetStartedView.swift */; };
 		388D830C2CDA54430056D583 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D830B2CDA54430056D583 /* OnBoardingView.swift */; };
+		3892642F2CE8DFE900B276F1 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 3892642E2CE8DFE800B276F1 /* ball.png */; };
 		38B1CB4D2C727848006B62D3 /* PopEngApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1CB4C2C727848006B62D3 /* PopEngApp.swift */; };
 		38B1CB4F2C727848006B62D3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1CB4E2C727848006B62D3 /* MainView.swift */; };
 		38B1CB602C727849006B62D3 /* PopEngTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1CB5F2C727849006B62D3 /* PopEngTests.swift */; };
 		38B1CB6A2C727849006B62D3 /* PopEngUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1CB692C727849006B62D3 /* PopEngUITests.swift */; };
 		38B1CB6C2C727849006B62D3 /* PopEngUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1CB6B2C727849006B62D3 /* PopEngUITestsLaunchTests.swift */; };
 		38B1CB7D2C73E95B006B62D3 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1CB7C2C73E95B006B62D3 /* SplashScreen.swift */; };
+		38B578E52CF35F0B00587CC4 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B578E42CF35F0B00587CC4 /* OnboardingViewModel.swift */; };
+		38B91F252CEF32E200D54E50 /* FlagsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 38B91F242CEF32E200D54E50 /* FlagsKit */; };
+		38B91F292CEF475900D54E50 /* SelectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B91F282CEF475900D54E50 /* SelectionCardView.swift */; };
 		38FCE6D12CBBE3F300E20BB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38FCE6D02CBBE3F300E20BB3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,7 @@
 /* Begin PBXFileReference section */
 		381B61632CDF8D49007C7452 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		381B61692CDFB1D6007C7452 /* OnboardingQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionView.swift; sourceTree = "<group>"; };
+		3838CD852CE66EF9004EBE50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		383F61A12CC426A70091062C /* Confetti.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Confetti.json; sourceTree = "<group>"; };
 		3866AAFD2C75FF5300817782 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3866AAFF2C75FF9900817782 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		38851E542C7F3F77007A4F85 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		388D83092CD900CF0056D583 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		388D830B2CDA54430056D583 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		3892642E2CE8DFE800B276F1 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		38B1CB492C727848006B62D3 /* PopEng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopEng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B1CB4C2C727848006B62D3 /* PopEngApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopEngApp.swift; sourceTree = "<group>"; };
 		38B1CB4E2C727848006B62D3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 		38B1CB692C727849006B62D3 /* PopEngUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopEngUITests.swift; sourceTree = "<group>"; };
 		38B1CB6B2C727849006B62D3 /* PopEngUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopEngUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		38B1CB7C2C73E95B006B62D3 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		38B578E42CF35F0B00587CC4 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		38B91F282CEF475900D54E50 /* SelectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCardView.swift; sourceTree = "<group>"; };
 		38FCE6D02CBBE3F300E20BB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				383F619F2CC425B70091062C /* Lottie in Frameworks */,
+				38B91F252CEF32E200D54E50 /* FlagsKit in Frameworks */,
 				38851E5D2C7F4DB3007A4F85 /* FirebaseDatabase in Frameworks */,
 				38851E612C7F4DB3007A4F85 /* FirebaseStorage in Frameworks */,
 				38851E5B2C7F4DB3007A4F85 /* FirebaseAuth in Frameworks */,
@@ -132,6 +141,7 @@
 		38B1CB402C727848006B62D3 = {
 			isa = PBXGroup;
 			children = (
+				3892642E2CE8DFE800B276F1 /* ball.png */,
 				3866AB132C789E2800817782 /* Assets.xcassets */,
 				38FCE6D02CBBE3F300E20BB3 /* GoogleService-Info.plist */,
 				38B1CB4B2C727848006B62D3 /* PopEng */,
@@ -154,6 +164,7 @@
 		38B1CB4B2C727848006B62D3 /* PopEng */ = {
 			isa = PBXGroup;
 			children = (
+				3838CD852CE66EF9004EBE50 /* Info.plist */,
 				388D83052CD8FF500056D583 /* Utils */,
 				383F61A02CC4265A0091062C /* Animations */,
 				38B1CB8C2C73FCE0006B62D3 /* Other */,
@@ -195,6 +206,7 @@
 				388D83092CD900CF0056D583 /* GetStartedView.swift */,
 				388D830B2CDA54430056D583 /* OnBoardingView.swift */,
 				381B61692CDFB1D6007C7452 /* OnboardingQuestionView.swift */,
+				38B91F282CEF475900D54E50 /* SelectionCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +218,7 @@
 				3866AB072C76014900817782 /* ProfileViewVM.swift */,
 				3866AB092C76016400817782 /* LoginViewVM.swift */,
 				3866AB0B2C76017B00817782 /* RegisterViewVM.swift */,
+				38B578E42CF35F0B00587CC4 /* OnboardingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -253,6 +266,7 @@
 				38851E5E2C7F4DB3007A4F85 /* FirebaseFirestore */,
 				38851E602C7F4DB3007A4F85 /* FirebaseStorage */,
 				383F619E2CC425B70091062C /* Lottie */,
+				38B91F242CEF32E200D54E50 /* FlagsKit */,
 			);
 			productName = PopEng;
 			productReference = 38B1CB492C727848006B62D3 /* PopEng.app */;
@@ -329,6 +343,7 @@
 			packageReferences = (
 				38851E592C7F4DB3007A4F85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				383F619D2CC425B70091062C /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				38B91F232CEF32E200D54E50 /* XCRemoteSwiftPackageReference "FlagsKit" */,
 			);
 			productRefGroup = 38B1CB4A2C727848006B62D3 /* Products */;
 			projectDirPath = "";
@@ -348,6 +363,7 @@
 			files = (
 				383F61A22CC426A70091062C /* Confetti.json in Resources */,
 				3866AB142C789E2800817782 /* Assets.xcassets in Resources */,
+				3892642F2CE8DFE900B276F1 /* ball.png in Resources */,
 				38FCE6D12CBBE3F300E20BB3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,8 +400,10 @@
 				3866AB002C75FF9900817782 /* LoginView.swift in Sources */,
 				38B1CB4D2C727848006B62D3 /* PopEngApp.swift in Sources */,
 				381B616A2CDFB1D6007C7452 /* OnboardingQuestionView.swift in Sources */,
+				38B91F292CEF475900D54E50 /* SelectionCardView.swift in Sources */,
 				3866AB062C76012700817782 /* MainViewVM.swift in Sources */,
 				3866AB122C7679B500817782 /* HeaderView.swift in Sources */,
+				38B578E52CF35F0B00587CC4 /* OnboardingViewModel.swift in Sources */,
 				381B61642CDF8D49007C7452 /* Question.swift in Sources */,
 				3866AB042C7600C700817782 /* User.swift in Sources */,
 				3866AB082C76014900817782 /* ProfileViewVM.swift in Sources */,
@@ -558,13 +576,13 @@
 				DEVELOPMENT_TEAM = 3KLZFAARL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PopEng/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PopEng;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,13 +610,13 @@
 				DEVELOPMENT_TEAM = 3KLZFAARL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PopEng/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PopEng;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -749,6 +767,14 @@
 				minimumVersion = 11.1.0;
 			};
 		};
+		38B91F232CEF32E200D54E50 /* XCRemoteSwiftPackageReference "FlagsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pichukov/FlagsKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -776,6 +802,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 38851E592C7F4DB3007A4F85 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		38B91F242CEF32E200D54E50 /* FlagsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38B91F232CEF32E200D54E50 /* XCRemoteSwiftPackageReference "FlagsKit" */;
+			productName = FlagsKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
