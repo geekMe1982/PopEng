@@ -40,6 +40,7 @@
 		38B578E52CF35F0B00587CC4 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B578E42CF35F0B00587CC4 /* OnboardingViewModel.swift */; };
 		38B91F252CEF32E200D54E50 /* FlagsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 38B91F242CEF32E200D54E50 /* FlagsKit */; };
 		38B91F292CEF475900D54E50 /* SelectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B91F282CEF475900D54E50 /* SelectionCardView.swift */; };
+		38C76EF32D26CFDA003103D0 /* SpeechBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C76EF22D26CFDA003103D0 /* SpeechBubble.swift */; };
 		38FCE6D12CBBE3F300E20BB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38FCE6D02CBBE3F300E20BB3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		38B1CB7C2C73E95B006B62D3 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		38B578E42CF35F0B00587CC4 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		38B91F282CEF475900D54E50 /* SelectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCardView.swift; sourceTree = "<group>"; };
+		38C76EF22D26CFDA003103D0 /* SpeechBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubble.swift; sourceTree = "<group>"; };
 		38FCE6D02CBBE3F300E20BB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +209,7 @@
 				388D830B2CDA54430056D583 /* OnBoardingView.swift */,
 				381B61692CDFB1D6007C7452 /* OnboardingQuestionView.swift */,
 				38B91F282CEF475900D54E50 /* SelectionCardView.swift */,
+				38C76EF22D26CFDA003103D0 /* SpeechBubble.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				38B1CB7D2C73E95B006B62D3 /* SplashScreen.swift in Sources */,
 				386F86622C824B440059179D /* DailyView.swift in Sources */,
 				38B1CB4F2C727848006B62D3 /* MainView.swift in Sources */,
+				38C76EF32D26CFDA003103D0 /* SpeechBubble.swift in Sources */,
 				3866AB022C75FFBA00817782 /* RegisterView.swift in Sources */,
 				3866AB002C75FF9900817782 /* LoginView.swift in Sources */,
 				38B1CB4D2C727848006B62D3 /* PopEngApp.swift in Sources */,
