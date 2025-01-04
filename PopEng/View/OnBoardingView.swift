@@ -9,13 +9,15 @@ import SwiftUI
 
 struct OnBoardingView: View {
     @State private var isFirstViewPresented = true
-    @Environment(\.presentationMode) var presentationMode : Binding<PresentationMode>
+    @State private var navigationPath = NavigationPath()
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $navigationPath) {
             VStack {
                 HStack {
                     Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
+                       dismiss()
                     }){
                         Image(systemName: "arrow.backward")
                             .resizable()
@@ -42,8 +44,13 @@ struct OnBoardingView: View {
                     .scaledToFit()
                     .offset(x:-20, y: -30)
                     .padding()
+                
                 Button(action: {
-                    isFirstViewPresented = false
+                    if isFirstViewPresented {
+                        isFirstViewPresented = false
+                    } else {
+                        navigationPath.append("toQuestions")
+                    }
                 }){
                     Text("Continue")
                         .font(.system(size: 18.0))
@@ -57,6 +64,14 @@ struct OnBoardingView: View {
                         .cornerRadius(10)
                 }
             }
+            .navigationDestination(for: String.self) { route in
+                           switch route {
+                           case "toQuestions":
+                               OnboardingQuestionView()
+                           default:
+                               EmptyView()
+                           }
+                       }
         }
         .navigationBarBackButtonHidden(true)
     }
