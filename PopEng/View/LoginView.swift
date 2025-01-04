@@ -26,7 +26,6 @@ struct LoginView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 200, height: 200, alignment: .center)
                 }
-          
                 //login fields
                 Form {
                     if !viewModel.errorMsg.isEmpty {

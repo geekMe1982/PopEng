@@ -19,12 +19,12 @@ struct GetStartedView: View {
                 VStack(spacing: 20.0) {
                     NavigationLink(destination:OnBoardingView())
                     {
-                    Text("Get Started")
-                        .font(.system(size: 18.0))
-                        .foregroundColor(.white)
-                        .padding(EdgeInsets(top: 16, leading: 100.0, bottom: 16, trailing: 100.0))
-                        .background(Color.purple)
-                        .cornerRadius(10.0)
+                        Text("Get Started")
+                            .font(.system(size: 18.0))
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 16, leading: 100.0, bottom: 16, trailing: 100.0))
+                            .background(Color.purple)
+                            .cornerRadius(10.0)
                     }
                     Button("Already a member", action: {})
                         .font(.system(size: 18.0))
