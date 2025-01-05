@@ -11,6 +11,7 @@ struct OnboardingQuestionView: View {
     @State private var progress = 0.1
     @State private var index = 0
     @State private var selectedEntry = Array(1...Data.questions[0].answerImg.count).map{_ in false}
+    @StateObject var viewModel = OnboardingViewModel()
     @Environment(\.presentationMode) var presentationMode : Binding<PresentationMode>
 
     var body: some View {
@@ -39,17 +40,36 @@ struct OnboardingQuestionView: View {
                 }
                 VStack {
                     ZStack {
-                        SpeechBubble(cornerRadius: 100, isBottom: true, pointLocation: 100)
+                        SpeechBubble(cornerRadius: 20, isBottom: true, pointLocation: 100)
+                            .fill(Color.purple)
+                            .frame(width:330, height: 80)
                         Text(Data.questions[index].query)
                             .font(.system(size: 20.0).bold())
-                            .foregroundColor(Color.purple)
+                            .foregroundColor(Color.white)
                     }
-                    Image("CasualBoyDance")
+                    Image(systemName: "questionmark")
                         .resizable()
                         .scaledToFit()
+                    LazyVStack {
+                        ForEach(0..<viewModel.question.answerText.count, id: \.self) {i
+                            in SelectionCardView(question: $viewModel.question, selectedEntry: $selectedEntry, quesryIndex: index, selectedIndex: i)
+                        }
+                    }
+                    Button(action: {}){
+                        Text("Continue")
+                            .font(.system(size: 18.0))
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(
+                                top: 16,
+                                leading: 100.0,
+                                bottom: 16,
+                                trailing: 100.0))
+                            .background(Color.purple)
+                            .cornerRadius(10)
+                    }
                 }.padding()
             }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 
