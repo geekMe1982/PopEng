@@ -14,4 +14,7 @@ struct Images {
     static let gettingStartedImage = "CasualBoySit"
     static let OnBoarding1 = "CasualBoyFly"
     static let onboarding2 = "BoySit"
+    static let LLevel1 = "level1"
+    static let LLevel2 = "level2"
+    static let LLevel3 = "level3"
 }
