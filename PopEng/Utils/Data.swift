@@ -12,11 +12,11 @@ struct Data {
     static let questions: [Question] =
     [
         Question(query: "What's your current level?",
-                 answerImg: ["fly", "hen", "diplodocus"],
+                 answerImg: [Images.LLevel1, Images.LLevel2, Images.LLevel3],
                  answerText: ["I'm new to this language", "I know some words/phrases", "I'm intermediate or heigher"],
                  answerSubText: []),
         Question(query: "How much of the language do you know?",
-                 answerImg: ["graph1", "graph2", "graph3", "graph4"],
+                 answerImg: ["img1", "img2", "img3", "4"],
                  answerText: ["I'm new to this language", "I know a few words/phrases", "I can engage in a simple conversation", "I know much"],
                  answerSubText: []),
         Question(query: "What's you daily learning goal?",
