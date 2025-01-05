@@ -17,4 +17,8 @@ struct Images {
     static let LLevel1 = "level1"
     static let LLevel2 = "level2"
     static let LLevel3 = "level3"
+    static let knowlegde1 = "graph1"
+    static let knowlegde2 = "graph2"
+    static let knowlegde3 = "graph3"
+    static let knowlegde4 = "graph4"
 }

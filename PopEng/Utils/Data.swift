@@ -16,7 +16,7 @@ struct Data {
                  answerText: ["I'm new to this language", "I know some words/phrases", "I'm intermediate or heigher"],
                  answerSubText: []),
         Question(query: "How much of the language do you know?",
-                 answerImg: ["img1", "img2", "img3", "4"],
+                 answerImg: ["knowlegde1", "knowlegde2", "knowlegde3", "knowlegde4"],
                  answerText: ["I'm new to this language", "I know a few words/phrases", "I can engage in a simple conversation", "I know much"],
                  answerSubText: []),
         Question(query: "What's you daily learning goal?",
