@@ -8,7 +8,7 @@
 import SwiftUI  
 
 struct OnboardingQuestionView: View {
-    @State private var progress = 0.2
+    @State private var progress = 0.1
     @State private var index = 0
     @State private var selectedEntry = Array(1...Data.questions[0].answerImg.count).map{_ in false}
     @Environment(\.presentationMode) var presentationMode : Binding<PresentationMode>
@@ -39,7 +39,7 @@ struct OnboardingQuestionView: View {
                 }
                 VStack {
                     ZStack {
-                        SpeechBubble(cornerRadius: 100, isButtom: true, pointLocation: 100)
+                        SpeechBubble(cornerRadius: 100, isBottom: true, pointLocation: 100)
                         Text(Data.questions[index].query)
                             .font(.system(size: 20.0).bold())
                             .foregroundColor(Color.purple)
