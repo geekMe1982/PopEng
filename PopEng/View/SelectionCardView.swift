@@ -17,48 +17,46 @@ struct SelectionCardView: View {
     
     var body: some View {
         Button(action: {
-            for i in 0..<selectedEntry.count{
+            for i in 0..<selectedEntry.count {
                 selectedEntry[i] = false
             }
             selectedEntry[selectedIndex] = true
         }) {
-            
-        }
-        ZStack(alignment: .leading) {
-            HStack(spacing: 20) {
-                if(question.answerImg.count>0) {
-                    Image(question.answerImg[selectedIndex])
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                        .padding(.leading, 40)
-                } else {
-                    Spacer()
-                        .frame(width: 20)
-                }
-                Text(question.answerText[selectedIndex])
-                    .font(.system(size: 18))
-                    .foregroundColor(.black)
-                    .bold()
-                    .multilineTextAlignment(.leading)
-                Spacer()
-                if(question.answerSubText.count>0) {
-                    Text(question.answerSubText[selectedIndex])
-                        .font(.system(size: 15))
+            ZStack(alignment: .leading) {
+                HStack(spacing: 20) {
+                    if(question.answerImg.count>0) {
+                        Image(question.answerImg[selectedIndex])
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                            .padding(.leading, 40)
+                    } else {
+                        Spacer()
+                            .frame(width: 20)
+                    }
+                    Text(question.answerText[selectedIndex])
+                        .font(.system(size: 18))
                         .foregroundColor(.black)
                         .bold()
-                        .multilineTextAlignment(.trailing)
-                        .padding(.trailing, 50)
-                    
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+                    if(question.answerSubText.count>0) {
+                        Text(question.answerSubText[selectedIndex])
+                            .font(.system(size: 15))
+                            .foregroundColor(.black)
+                            .bold()
+                            .multilineTextAlignment(.trailing)
+                            .padding(.trailing, 50)
+                        
+                    }
                 }
+                RoundedRectangle (cornerRadius: 20)
+                    .stroke(selectedEntry[selectedIndex] ? .purple : .gray, lineWidth: 2)
+                    .frame(width: 350, height: 80)
+                    .padding()
+                    .disabled(!selectedEntry[selectedIndex])
             }
-            RoundedRectangle (cornerRadius: 20)
-                .stroke(selectedEntry[selectedIndex] ? .purple : .gray, lineWidth: 2)
-                .frame(width: 350, height: 80)
-                .padding()
-                .disabled(!selectedEntry[selectedIndex])
         }
-        
     }
 }
 
