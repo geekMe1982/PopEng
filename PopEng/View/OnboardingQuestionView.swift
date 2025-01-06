@@ -52,7 +52,7 @@ struct OnboardingQuestionView: View {
                         .scaledToFit()
                     LazyVStack {
                         ForEach(0..<viewModel.question.answerText.count, id: \.self) {i
-                            in SelectionCardView(question: $viewModel.question, selectedEntry: $selectedEntry, quesryIndex: index, selectedIndex: i)
+                            in SelectionCardView(question: $viewModel.question, selectedEntry: $selectedEntry, queryIndex: index, selectedIndex: i)
                         }
                     }
                     Button(action: {}){
