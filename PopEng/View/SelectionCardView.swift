@@ -12,7 +12,7 @@ struct SelectionCardView: View {
     @Binding var question: Question
     @Binding var selectedEntry: [Bool]
     
-    var quesryIndex: Int
+    var queryIndex: Int
     var selectedIndex: Int
     
     var body: some View {
