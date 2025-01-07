@@ -8,7 +8,7 @@
 import SwiftUI  
 
 struct OnboardingQuestionView: View {
-    @State private var progress = 0.1
+    @State private var progress = 0.0
     @State private var index = 0
     @State private var selectedEntry = Array(1...Data.questions[0].answerImg.count).map{_ in false}
     @StateObject var viewModel = OnboardingViewModel()

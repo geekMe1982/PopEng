@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Question: Identifiable {
+struct QuestionModel: Identifiable {
     let id = UUID().uuidString
     let query: String
     let answerImg: [String]

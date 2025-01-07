@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		381B61642CDF8D49007C7452 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B61632CDF8D49007C7452 /* Question.swift */; };
+		381B61642CDF8D49007C7452 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B61632CDF8D49007C7452 /* QuestionModel.swift */; };
 		381B616A2CDFB1D6007C7452 /* OnboardingQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381B61692CDFB1D6007C7452 /* OnboardingQuestionView.swift */; };
 		383F619F2CC425B70091062C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 383F619E2CC425B70091062C /* Lottie */; };
 		383F61A22CC426A70091062C /* Confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 383F61A12CC426A70091062C /* Confetti.json */; };
@@ -62,7 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		381B61632CDF8D49007C7452 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		381B61632CDF8D49007C7452 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		381B61692CDFB1D6007C7452 /* OnboardingQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionView.swift; sourceTree = "<group>"; };
 		3838CD852CE66EF9004EBE50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		383F61A12CC426A70091062C /* Confetti.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Confetti.json; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 			children = (
 				3866AB032C7600C700817782 /* User.swift */,
 				38851E542C7F3F77007A4F85 /* Extensions.swift */,
-				381B61632CDF8D49007C7452 /* Question.swift */,
+				381B61632CDF8D49007C7452 /* QuestionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,7 +408,7 @@
 				3866AB062C76012700817782 /* MainViewVM.swift in Sources */,
 				3866AB122C7679B500817782 /* HeaderView.swift in Sources */,
 				38B578E52CF35F0B00587CC4 /* OnboardingViewModel.swift in Sources */,
-				381B61642CDF8D49007C7452 /* Question.swift in Sources */,
+				381B61642CDF8D49007C7452 /* QuestionModel.swift in Sources */,
 				3866AB042C7600C700817782 /* User.swift in Sources */,
 				3866AB082C76014900817782 /* ProfileViewVM.swift in Sources */,
 				3866AB0C2C76017B00817782 /* RegisterViewVM.swift in Sources */,
