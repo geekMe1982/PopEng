@@ -8,9 +8,17 @@
 import Foundation
 
 struct QuestionModel: Identifiable {
-    let id = UUID().uuidString
+    let id: String
     let query: String
     let answerImg: [String]
     let answerText: [String]
     let answerSubText: [String]
+    
+    init(id: String = UUID().uuidString, query: String, answerImg:[String], answerText:[String], answerSubText: [String] ) {
+        self.id = id
+        self.query = query
+        self.answerImg = answerImg
+        self.answerText = answerText
+        self.answerSubText = answerSubText
+    }
 }
