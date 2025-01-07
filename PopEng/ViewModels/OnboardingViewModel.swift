@@ -8,11 +8,11 @@
 import Foundation
 
 class OnboardingViewModel: ObservableObject {
-    @Published var question: Question
+    @Published var question: QuestionModel
     var index: Int
     
     init() {
-        question = Question(query: "", answerImg: [], answerText: [], answerSubText: [])
+        question = QuestionModel(query: "", answerImg: [], answerText: [], answerSubText: [])
         index = 0
         self.getQuestionAtIndex(index: index)
       
