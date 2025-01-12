@@ -5,15 +5,15 @@
 //  Created by Adam Khalifa on 09.11.2024.
 //
 
-import SwiftUI  
+import SwiftUI
 
 struct OnboardingQuestionView: View {
-    @State private var progress = 0.0
+    @State private var progress: CGFloat = 0.0
     @State private var index = 0
     @State private var selectedEntry = Array(1...Data.questions[0].answerImg.count).map{_ in false}
     @StateObject var viewModel = OnboardingViewModel()
     @Environment(\.presentationMode) var presentationMode : Binding<PresentationMode>
-
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -42,12 +42,12 @@ struct OnboardingQuestionView: View {
                     ZStack {
                         SpeechBubble(cornerRadius: 20, isBottom: true, pointLocation: 100)
                             .fill(Color.purple)
-                            .frame(width:330, height: 80)
+                            .frame(width: 330, height: 80)
                         Text(Data.questions[index].query)
                             .font(.system(size: 20.0).bold())
                             .foregroundColor(Color.white)
                     }
-                    Image(systemName: "questionmark")
+                    Image(systemName: "person.fill.questionmark")
                         .resizable()
                         .scaledToFit()
                     LazyVStack {
@@ -55,7 +55,15 @@ struct OnboardingQuestionView: View {
                             in SelectionCardView(question: $viewModel.question, selectedEntry: $selectedEntry, queryIndex: index, selectedIndex: i)
                         }
                     }
-                    Button(action: {}){
+                    Button(action: {
+                        if index < Data.questions.count - 1 {
+                            index += 1
+                            selectedEntry = Array(repeating: false, count: Data.questions[index].answerImg.count) // Reset selectedEntry
+                            viewModel.getQuestionAtIndex(index: index)
+                        } else {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                    }){
                         Text("Continue")
                             .font(.system(size: 18.0))
                             .foregroundColor(.white)
@@ -67,6 +75,8 @@ struct OnboardingQuestionView: View {
                             .background(Color.purple)
                             .cornerRadius(10)
                     }
+                    .disabled(!selectedEntry.contains(true)) // Disable button if no option is selected
+                    .opacity(selectedEntry.contains(true) ? 1.0 : 0.5) // Change opacity for visual feedback
                 }.padding()
             }
         }.navigationBarBackButtonHidden(true)
