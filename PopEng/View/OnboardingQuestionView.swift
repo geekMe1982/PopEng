@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingQuestionView: View {
     @State private var progress: CGFloat = 0.0
+    @State private var isSecondViewPresented = false
     @State private var index = 0
     @State private var selectedEntry = Array(1...Data.questions[0].answerImg.count).map{_ in false}
     @StateObject var viewModel = OnboardingViewModel()
@@ -42,6 +43,7 @@ struct OnboardingQuestionView: View {
                             .font(.system(size: 20.0).bold())
                             .foregroundColor(Color.white)
                     }
+                    .frame(width: isSecondViewPresented ? 300 : 250)
                     Image(systemName: "person.fill.questionmark")
                         .resizable()
                         .scaledToFit()
@@ -54,6 +56,7 @@ struct OnboardingQuestionView: View {
                         if index < Data.questions.count - 1 {
                             index += 1
                             selectedEntry = Array(repeating: false, count: Data.questions[index].answerImg.count) // Reset selectedEntry
+                            isSecondViewPresented = true
                             viewModel.getQuestionAtIndex(index: index)
                             progress = CGFloat(index + 1) / CGFloat(Data.questions.count) // Update progress
                         } else {
