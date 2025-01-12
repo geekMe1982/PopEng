@@ -28,15 +28,10 @@ struct OnboardingQuestionView: View {
                             .foregroundColor(Color.purple)
                             .bold()
                     }.padding()
-                    ZStack(alignment: .leading) {
-                        Rectangle()
-                            .foregroundStyle(Color.gray.opacity(0.3))
-                            .frame(width: 300, height: 20.0)
-                        Rectangle()
-                            .foregroundStyle(Color.purple)
-                            .frame(width: CGFloat(progress)*300, height: 20.0)
-                            .cornerRadius(10)
-                    }.cornerRadius(10)
+                    ProgressView(value: Float(index), total: Float(Data.questions.count)) // Add progress bar
+                              .progressViewStyle(LinearProgressViewStyle(tint: .purple))
+                              .frame(width: 300) // Set width for the progress bar
+                              .padding()
                 }
                 VStack {
                     ZStack {
@@ -60,6 +55,7 @@ struct OnboardingQuestionView: View {
                             index += 1
                             selectedEntry = Array(repeating: false, count: Data.questions[index].answerImg.count) // Reset selectedEntry
                             viewModel.getQuestionAtIndex(index: index)
+                            progress = CGFloat(index + 1) / CGFloat(Data.questions.count) // Update progress
                         } else {
                             self.presentationMode.wrappedValue.dismiss()
                         }
