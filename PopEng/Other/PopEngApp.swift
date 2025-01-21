@@ -15,7 +15,7 @@ struct PopEngApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            GetStartedView()
+            SplashScreen()
         }
     }
 }
