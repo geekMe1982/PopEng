@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct SplashScreen: View {
     @State private var show = false
     @State private var showHomeView = false
