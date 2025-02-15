@@ -8,22 +8,15 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var viewModel = MainViewVM()
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
-        if viewModel.isSignedIn, !viewModel.currentUserID.isEmpty {
-            TabView {
-                DailyView()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
-                ProfileView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person.circle")
-                    }
+        Group {
+            if viewModel.userSession != nil {
+                UserProfileView()
+            } else {
+                LoginView()
             }
-        } else {
-            LoginView()
         }
     }
 }

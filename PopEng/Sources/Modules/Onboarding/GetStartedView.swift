@@ -26,22 +26,20 @@ struct GetStartedView: View {
                             .background(Color.purple)
                             .cornerRadius(10.0)
                     }
-                    Button("Already a member", action: {})
-                        .font(.system(size: 18.0))
-                        .foregroundColor(.purple)
-                        .padding(EdgeInsets(top: 16, leading: 75, bottom: 16, trailing: 75))
-                        .background(Color.clear)
-                        .cornerRadius(10.0)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 10.0)
-                                .stroke(Color.purple, lineWidth: 2.0)
-                        }
-                }.padding(.top, 150)
+                    NavigationLink(destination: LoginView()) {
+                        Text("Already a member")
+                            .font(.system(size: 18.0))
+                            .foregroundColor(.purple)
+                            .padding(EdgeInsets(top: 16, leading: 75, bottom: 16, trailing: 75))
+                            .background(Color.clear)
+                            .cornerRadius(10.0)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 10.0)
+                                    .stroke(Color.purple, lineWidth: 2.0)
+                            }
+                    }
+                }
             }
         }
     }
-}
-
-#Preview {
-    GetStartedView()
 }

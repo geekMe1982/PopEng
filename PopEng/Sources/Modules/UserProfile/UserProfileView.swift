@@ -7,32 +7,60 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct UserProfileView: View {
+    @State private var showSigninView: Bool = false
+    
     var body: some View {
-        NavigationView {
-            VStack{
-                HStack{
-                    Text("Adam Khalifa")
-                    Image("profileImage")
-                        .resizable()
-                        .cornerRadius(100.0)
-                        .padding()
-                        .frame(width:150,
-                               height: 150)
-                }
-                VStack{
-                    List{
-                        Text("Date of birth:")
-                        Text("Mobile number:")
-                        Text("Subscribtion:")
+        List{
+            Section{
+                HStack(spacing: 20) {
+                    Text(User.MOCK_USER.initials)
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width:72, height: 72)
+                        .background(Color(.systemPurple))
+                        .clipShape(.circle)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(User.MOCK_USER.fullName)
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .padding(.top, 4)
+                        Text(User.MOCK_USER.email)
+                            .font(.footnote)
+                            .accentColor(.gray)
                     }
                 }
             }
-            .navigationTitle("Profile")
+            Section("General") {
+                HStack {
+                    SettingsRowView(imageName: "gear", title: "Version", tintColor: Color(.systemGray))
+                    Spacer()
+                    Text("1.0.0")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
+            }
+            Section("Account") {
+                Button {
+                    
+                } label: {
+                    SettingsRowView(imageName: "arrow.left.circle.fill",
+                                    title: "Sign Out",
+                                    tintColor: .red)
+                }
+                Button {
+                    
+                } label: {
+                    SettingsRowView(imageName: "xmark.circle.fill",
+                                    title: "delete account",
+                                    tintColor: .red)
+                }
+            }
         }
     }
 }
 
 #Preview {
-    ProfileView()
+    UserProfileView()
 }

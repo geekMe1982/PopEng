@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingQuestionView: View {
     @State private var progress: CGFloat = 0.0
-    @State private var isSecondViewPresented = false
+    @State private var isSecondViewPresented = true
     @State private var index = 0
     @State private var selectedEntry = Array(1...Data.questions[0].answerImg.count).map{_ in false}
     @StateObject var viewModel = OnboardingViewModel()
@@ -30,9 +30,9 @@ struct OnboardingQuestionView: View {
                             .bold()
                     }.padding()
                     ProgressView(value: Float(index), total: Float(Data.questions.count)) // Add progress bar
-                              .progressViewStyle(LinearProgressViewStyle(tint: .purple))
-                              .frame(width: 300) // Set width for the progress bar
-                              .padding()
+                        .progressViewStyle(LinearProgressViewStyle(tint: .purple))
+                        .frame(width: 300) // Set width for the progress bar
+                        .padding()
                 }
                 VStack {
                     ZStack {
@@ -52,15 +52,16 @@ struct OnboardingQuestionView: View {
                             in SelectionCardView(question: $viewModel.question, selectedEntry: $selectedEntry, queryIndex: index, selectedIndex: i)
                         }
                     }
+                    
                     Button(action: {
                         if index < Data.questions.count - 1 {
                             index += 1
                             selectedEntry = Array(repeating: false, count: Data.questions[index].answerImg.count) // Reset selectedEntry
-                            isSecondViewPresented = true
+                            //isSecondViewPresented = true
                             viewModel.getQuestionAtIndex(index: index)
                             progress = CGFloat(index + 1) / CGFloat(Data.questions.count) // Update progress
                         } else {
-                            self.presentationMode.wrappedValue.dismiss()
+                            
                         }
                     }){
                         Text("Continue")

@@ -9,12 +9,12 @@ import SwiftUI
 import  Lottie
 
 struct LoginView: View {
-    @StateObject var viewModel = LoginViewVM()
-    
-    let gradient = Gradient(colors: [.red, .purple, .blue])
+    @EnvironmentObject var viewModel : AuthViewModel
+    @State private var email = ""
+    @State private var password = ""
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 //Animation
                 ZStack {
@@ -23,47 +23,56 @@ struct LoginView: View {
                         .resizable()
                     Image("POP")
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 200, height: 200, alignment: .center)
+                        .scaledToFit()
+                        .padding(.vertical, 32)
                 }
+                .frame(width: 200, height: 200)
+                
                 //login fields
-                Form {
-                    if !viewModel.errorMsg.isEmpty {
-                        Text("\(viewModel.errorMsg)")
-                            .foregroundColor(Color.red)
-                    }
-                    TextField("enter your email",
-                              text: $viewModel.emailAddress
-                    )
-                    .border(.linearGradient(gradient, startPoint: .center, endPoint: .bottomTrailing))
-                    .textFieldStyle(.roundedBorder)
-                    .textInputAutocapitalization(.never)
-                    .disableAutocorrection(true)
+                VStack(spacing: 24) {
+                    InputView(text: $email,
+                              title: "email address",
+                              placeHolder: "name@example.com")
+                    .autocapitalization(.none)
                     
-                    TextField("enter your pasword",
-                              text: $viewModel.password
-                    )
-                    .textFieldStyle(.roundedBorder)
-                    .textInputAutocapitalization(.never)
-                    .disableAutocorrection(true)
-                    .border(.linearGradient(gradient, startPoint: .topLeading, endPoint: .bottomTrailing))
-                    
-                    Button {
-                        viewModel.login()
-                    } label: {
-                        Text("Log In")
-                            .frame(maxWidth: .infinity)
-                            .foregroundStyle(.primary)
+                    InputView(text: $password,
+                              title: "password",
+                              placeHolder: "enter your password",
+                              isSecureField: true)
+                }
+                .padding(.horizontal)
+                Spacer()
+                //sign in button
+                Button {
+                    Task {
+                        try await viewModel.signIn(withEmail: email, password: password)
                     }
-                    .buttonStyle(.bordered)
-                    .controlSize(.large)
+                } label: {
+                    HStack {
+                        Text("Sign In")
+                            .fontWeight(.semibold)
+                        Image(systemName: "arrow.right")
+                    }
+                    .foregroundColor(.white)
+                    .frame(width: UIScreen.main.bounds.width - 32, height: 52)
                 }
-                //sign up
-                VStack {
-                    Text("New around here?")
-                    NavigationLink("Create an account", destination: RegisterView())
+                .background(Color(.systemPurple))
+                .cornerRadius(10)
+                .padding(.top, 24)
+                
+                Spacer()
+                
+                //sign up button
+                NavigationLink {
+                    RegisterView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    HStack {
+                        Text("New around here?")
+                        Text("Sign Up")
+                            .fontWeight(.bold)
+                    }
                 }
-                .padding(.bottom, 30)
             }
         }
     }

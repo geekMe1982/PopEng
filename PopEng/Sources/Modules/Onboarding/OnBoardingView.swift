@@ -69,7 +69,7 @@ struct OnBoardingView: View {
                            case "toQuestions":
                                OnboardingQuestionView()
                            default:
-                               EmptyView()
+                               LoginView()
                            }
                        }
         }

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FlagsKit
 
 struct Data {
     static let questions: [QuestionModel] =

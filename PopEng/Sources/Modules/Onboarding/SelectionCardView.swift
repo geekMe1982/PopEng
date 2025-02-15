@@ -49,7 +49,6 @@ struct SelectionCardView: View {
                                 .bold()
                                 .multilineTextAlignment(.trailing)
                                 .padding(.trailing, 50)
-                            
                         }
                     }
                     RoundedRectangle (cornerRadius: 20)
