@@ -8,8 +8,11 @@
 import Foundation
 import Firebase
 import FirebaseAuth
-import FirebaseStorage
 import FirebaseFirestore
+
+protocol AuthFormProtocol {
+    var formIsValid: Bool { get }
+}
 
 @MainActor
 class AuthViewModel: ObservableObject {
