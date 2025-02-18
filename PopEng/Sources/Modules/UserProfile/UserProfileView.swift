@@ -45,7 +45,7 @@ struct UserProfileView: View {
                 }
                 Section("Account") {
                     Button {
-                        
+                        viewModel.signOut()
                     } label: {
                         SettingsRowView(imageName: "arrow.left.circle.fill",
                                         title: "Sign Out",
