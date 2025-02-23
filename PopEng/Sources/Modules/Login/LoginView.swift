@@ -30,17 +30,19 @@ struct LoginView: View {
                 
                 //login fields
                 VStack(spacing: 24) {
-                    InputView(text: $email,
+                    InputView(text: $viewModel.email,
                               title: "email address",
-                              placeHolder: "name@example.com")
+                              placeHolder: "name@example.com", mode: .normal)
                     .autocapitalization(.none)
                     
-                    InputView(text: $password,
+                    InputView(text: $viewModel.password,
                               title: "password",
                               placeHolder: "enter your password",
-                              isSecureField: true)
+                              mode: .secure)
                 }
+                .autocapitalization(.none)
                 .padding(.horizontal)
+                
                 Spacer()
                 
                 //sign in button

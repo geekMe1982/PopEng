@@ -45,12 +45,11 @@ class AuthViewModel: ObservableObject {
             let encodedUser = try Firestore.Encoder().encode(user)
             try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
             await fetchUser()
-
+            
         } catch {
             print("\(error.localizedDescription)")
             
         }
-        
     }
     
     func signOut() {
@@ -61,7 +60,6 @@ class AuthViewModel: ObservableObject {
         } catch {
             print("error signing out")
         }
-        
     }
     
     func fetchUser() async {
@@ -69,8 +67,8 @@ class AuthViewModel: ObservableObject {
         guard let snapshot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else { return }
         self.currentUser = try? snapshot.data(as: User.self)
         
-        print("DEBUG: current user is: \(self.currentUser)")
-     
+        print("DEBUG: current user is: \(String(describing: self.currentUser))")
+        
         
     }
 }

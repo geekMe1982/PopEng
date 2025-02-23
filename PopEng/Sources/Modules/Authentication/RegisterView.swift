@@ -91,9 +91,9 @@ struct RegisterView: View {
 //class RegisterViewVM: ObservableObject {
 //
 //
-//    
 //
-//    
+//
+//
 //    private func validate() -> Bool{
 //        guard
 //            !emailAddress.trimmingCharacters(in: .whitespaces).isEmpty,
@@ -105,7 +105,7 @@ struct RegisterView: View {
 //            errorMsg = "It says EEE-mail, comprende?!"
 //            return false
 //        }
-//        
+//
 //        guard password.count >= 6 else {
 //            errorMsg = "good attempt, but your Password is too short"
 //            return false

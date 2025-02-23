@@ -8,10 +8,33 @@
 import SwiftUI
 
 struct InputView: View {
+    
     @Binding var text: String
     let title: String
     let placeHolder: String
-    var isSecureField = false
+    let mode: Mode
+    @State private var isSecureField: Bool
+    
+    init(text: Binding<String>, title: String, placeHolder: String, mode: Mode = .normal) {
+        self._text = text
+        self.title = title
+        self.placeHolder = placeHolder
+        self.mode = mode
+        self.isSecureField = mode.isSecure
+    }
+    enum Mode {
+        var isSecure: Bool {
+            switch self{
+                
+            case .secure:
+                true
+            case .normal:
+                false
+            }
+        }
+        case secure
+        case normal
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -28,9 +51,18 @@ struct InputView: View {
             }
             Divider()
         }
+        .overlay(alignment: .trailing) {
+            if mode.isSecure {
+                Image(systemName: self.isSecureField ? "eye.slash" : "eye")
+                    .accentColor(.gray)
+                    .onTapGesture {
+                        isSecureField.toggle()
+                    }
+            }
+        }
     }
 }
 
 #Preview {
-    InputView(text: .constant(""), title: "Email", placeHolder: "name@example.com")
+    InputView(text: .constant(""), title: "Email", placeHolder: "name@example.com", mode: .normal)
 }
